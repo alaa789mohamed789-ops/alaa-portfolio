@@ -1,0 +1,838 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alaa | Data Analyst Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 75px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        :root {
+            --purple: #8b5cf6;
+            --dark-purple: #24133f;
+            --light-purple: #f3edff;
+            --white: #ffffff;
+        }
+
+        .purple-text {
+            color: var(--purple);
+        }
+
+        .custom-navbar {
+            background-color: var(--dark-purple);
+        }
+
+        .navbar-brand {
+            font-size: 23px;
+        }
+
+        .nav-link {
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #c4b5fd !important;
+        }
+
+        /* Home */
+
+        .hero-section {
+            background: linear-gradient(135deg, #ffffff, #f3edff);
+            padding: 80px 0;
+        }
+
+        .welcome-badge {
+            background-color: #e9ddff;
+            color: #5b21b6;
+        }
+
+        .job-title {
+            color: var(--purple);
+        }
+
+        .hero-description {
+            color: #666666;
+            line-height: 1.9;
+        }
+
+        .btn-purple {
+            background-color: var(--purple);
+            color: white;
+            border: 2px solid var(--purple);
+            transition: 0.3s;
+        }
+
+        .btn-purple:hover {
+            background-color: #6d28d9;
+            color: white;
+        }
+
+        .btn-outline-purple {
+            border: 2px solid var(--purple);
+            color: #7c3aed;
+        }
+
+        .btn-outline-purple:hover {
+            background-color: var(--purple);
+            color: white;
+        }
+
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #a78bfa;
+            box-shadow: 0 8px 25px rgba(91, 33, 182, 0.18);
+        }
+
+        .profile-badge {
+            background-color: #6d28d9;
+        }
+
+        /* General Sections */
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-heading p {
+            color: #777777;
+            margin-top: 10px;
+        }
+
+        .custom-card {
+            border: 1px solid #eee6ff;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(80, 40, 140, 0.08);
+            overflow: hidden;
+        }
+
+        .custom-card p {
+            line-height: 1.8;
+            color: #666666;
+        }
+
+        .icon-box {
+            font-size: 40px;
+            color: var(--purple);
+        }
+
+        .purple-header {
+            background-color: var(--purple);
+        }
+
+        /* Skills */
+
+        .skills-section {
+            background-color: #faf8ff;
+        }
+
+        .skill-card {
+            border: 1px solid #eee6ff;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover,
+        .project-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(91, 33, 182, 0.12);
+        }
+
+        .skill-icon {
+            font-size: 45px;
+        }
+
+        .excel-icon {
+            color: #198754;
+        }
+
+        .sql-icon {
+            color: #0d6efd;
+        }
+
+        .python-icon {
+            color: #d4a017;
+        }
+
+        .powerbi-icon {
+            color: var(--purple);
+        }
+
+        /* Projects */
+
+        .project-card {
+            border: 1px solid #eee6ff;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .project-icon {
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 65px;
+            color: white;
+        }
+
+        .project-one {
+            background: linear-gradient(135deg, #198754, #70c69b);
+        }
+
+        .project-two {
+            background: linear-gradient(135deg, #2563eb, #93c5fd);
+        }
+
+        .project-three {
+            background: linear-gradient(135deg, #6d28d9, #c4b5fd);
+        }
+
+        /* Contact */
+
+        .contact-section {
+            background-color: #f7f3ff;
+        }
+
+        .form-control {
+            border: 1px solid #ded3f7;
+            padding: 12px;
+        }
+
+        .form-control:focus {
+            border-color: var(--purple);
+            box-shadow: 0 0 0 0.2rem rgba(139, 92, 246, 0.15);
+        }
+
+        /* Footer */
+
+        .footer-section {
+            background-color: var(--dark-purple);
+            color: white;
+        }
+
+        .footer-section p {
+            color: #d6c9ed;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 767px) {
+            .hero-section {
+                text-align: center;
+                padding: 50px 0;
+            }
+
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+
+            .section-padding {
+                padding: 55px 0;
+            }
+
+            .display-4 {
+                font-size: 2.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top custom-navbar">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="#home">
+            <span class="purple-text">Alaa</span> Portfolio
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navMenu"
+                aria-controls="navMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+
+            <div class="navbar-nav ms-auto">
+
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- Home Section -->
+
+<section id="home" class="hero-section">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-7 text-center text-md-start">
+
+                <span class="badge welcome-badge mb-3 p-2">
+                    Welcome To My Portfolio
+                </span>
+
+                <h1 class="display-4 fw-bold">
+                    Hi, I'm <span class="purple-text">Alaa</span>
+                </h1>
+
+                <h2 class="h3 job-title mb-3">
+                    Aspiring Data Analyst
+                </h2>
+
+                <p class="lead hero-description">
+                    I am passionate about data analysis and transforming
+                    raw data into meaningful insights that support
+                    better decision-making.
+                </p>
+
+                <p class="hero-description">
+                    I am developing my skills in Excel, SQL, Python,
+                    and Power BI to analyze data and create useful reports.
+                </p>
+
+                <a href="#projects" class="btn btn-purple btn-lg me-2 mb-2">
+                    <i class="bi bi-bar-chart-line me-2"></i>
+                    My Projects
+                </a>
+
+                <a href="#contact" class="btn btn-outline-purple btn-lg mb-2">
+                    Contact Me
+                </a>
+
+            </div>
+
+
+            <!-- Profile Image: Original Image Path -->
+
+            <div class="col-md-5 text-center mt-4 mt-md-0">
+
+                <img
+                    src="C:\Users\MaKa Corporation\Downloads\WhatsApp Image 2026-10-15 at 9.03.39 PM.jpeg"
+                    alt="Alaa Profile"
+                    width="250"
+                    height="250"
+                    class="profile-image">
+
+                <div class="mt-3">
+
+                    <span class="badge profile-badge p-2">
+                        <i class="bi bi-graph-up-arrow me-1"></i>
+                        Data Analysis Enthusiast
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- About Section -->
+
+<section id="about" class="section-padding">
+
+    <div class="container">
+
+        <div class="text-center section-heading mb-5">
+
+            <h2 class="fw-bold">
+                About <span class="purple-text">Me</span>
+            </h2>
+
+            <p>Get to know me better</p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6">
+
+                <div class="card custom-card h-100">
+
+                    <div class="card-body p-4">
+
+                        <div class="icon-box mb-3">
+                            <i class="bi bi-person-workspace"></i>
+                        </div>
+
+                        <h4 class="fw-bold">Who Am I?</h4>
+
+                        <p>
+                            I am an aspiring Data Analyst interested in
+                            exploring data, identifying patterns, and
+                            turning information into meaningful insights.
+                        </p>
+
+                        <p>
+                            My goal is to develop my analytical skills
+                            and use data to help solve real-world problems.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6">
+
+                <div class="card custom-card h-100">
+
+                    <div class="card-header purple-header text-white p-3">
+
+                        <h5 class="mb-0">
+                            <i class="bi bi-person-lines-fill me-2"></i>
+                            Personal Information
+                        </h5>
+
+                    </div>
+
+                    <div class="card-body p-4">
+
+                        <p>
+                            <i class="bi bi-person-fill purple-text me-2"></i>
+                            <strong>Name:</strong> Alaa
+                        </p>
+
+                        <p>
+                            <i class="bi bi-envelope-fill purple-text me-2"></i>
+                            <strong>Email:</strong> alaa789mohamed789@gmail.com
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt-fill purple-text me-2"></i>
+                            <strong>Location:</strong> Egypt
+                        </p>
+
+                        <p class="mb-0">
+                            <i class="bi bi-briefcase-fill purple-text me-2"></i>
+                            <strong>Career Goal:</strong> Data Analyst
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Skills Section -->
+
+<section id="skills" class="skills-section section-padding">
+
+    <div class="container">
+
+        <div class="text-center section-heading mb-5">
+
+            <h2 class="fw-bold">
+                My <span class="purple-text">Skills</span>
+            </h2>
+
+            <p>Tools I use to analyze and visualize data</p>
+
+        </div>
+
+        <div class="row g-4 text-center">
+
+
+            <!-- Excel -->
+
+            <div class="col-6 col-md-3">
+
+                <div class="card skill-card h-100">
+
+                    <div class="card-body p-4">
+
+                        <i class="bi bi-file-earmark-spreadsheet skill-icon excel-icon"></i>
+
+                        <h5 class="fw-bold mt-3">Excel</h5>
+
+                        <span class="badge bg-success">
+                            Data Cleaning
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SQL -->
+
+            <div class="col-6 col-md-3">
+
+                <div class="card skill-card h-100">
+
+                    <div class="card-body p-4">
+
+                        <i class="bi bi-database skill-icon sql-icon"></i>
+
+                        <h5 class="fw-bold mt-3">SQL</h5>
+
+                        <span class="badge bg-primary">
+                            Data Queries
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Python -->
+
+            <div class="col-6 col-md-3">
+
+                <div class="card skill-card h-100">
+
+                    <div class="card-body p-4">
+
+                        <i class="bi bi-code-slash skill-icon python-icon"></i>
+
+                        <h5 class="fw-bold mt-3">Python</h5>
+
+                        <span class="badge bg-warning text-dark">
+                            Data Analysis
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Power BI -->
+
+            <div class="col-6 col-md-3">
+
+                <div class="card skill-card h-100">
+
+                    <div class="card-body p-4">
+
+                        <i class="bi bi-bar-chart-line skill-icon powerbi-icon"></i>
+
+                        <h5 class="fw-bold mt-3">Power BI</h5>
+
+                        <span class="badge bg-info text-dark">
+                            Visualization
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Projects Section -->
+
+<section id="projects" class="section-padding">
+
+    <div class="container">
+
+        <div class="text-center section-heading mb-5">
+
+            <h2 class="fw-bold">
+                My <span class="purple-text">Projects</span>
+            </h2>
+
+            <p>Practical projects in data analysis</p>
+
+        </div>
+
+        <div class="row g-4">
+
+
+            <!-- Project 1 -->
+
+            <div class="col-md-4">
+
+                <div class="card project-card h-100">
+
+                    <div class="project-icon project-one">
+                        <i class="bi bi-file-earmark-spreadsheet"></i>
+                    </div>
+
+                    <div class="card-body p-4">
+
+                        <span class="badge bg-success mb-2">Excel</span>
+
+                        <h5 class="fw-bold">Sales Data Analysis</h5>
+
+                        <p class="text-secondary">
+                            Clean sales data, remove duplicates,
+                            analyze sales trends, and create reports
+                            using Excel.
+                        </p>
+
+                        <a href="#contact" class="btn btn-outline-purple">
+                            Project Details
+                            <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Project 2 -->
+
+            <div class="col-md-4">
+
+                <div class="card project-card h-100">
+
+                    <div class="project-icon project-two">
+                        <i class="bi bi-database"></i>
+                    </div>
+
+                    <div class="card-body p-4">
+
+                        <span class="badge bg-primary mb-2">SQL</span>
+
+                        <h5 class="fw-bold">Customer Data Analysis</h5>
+
+                        <p class="text-secondary">
+                            Use SQL to filter, sort, and summarize
+                            customer data and answer business questions.
+                        </p>
+
+                        <a href="#contact" class="btn btn-outline-purple">
+                            Project Details
+                            <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Project 3 -->
+
+            <div class="col-md-4">
+
+                <div class="card project-card h-100">
+
+                    <div class="project-icon project-three">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+
+                    <div class="card-body p-4">
+
+                        <span class="badge bg-info text-dark mb-2">
+                            Power BI
+                        </span>
+
+                        <h5 class="fw-bold">Sales Dashboard</h5>
+
+                        <p class="text-secondary">
+                            Create an interactive dashboard to visualize
+                            sales performance and present key insights.
+                        </p>
+
+                        <a href="#contact" class="btn btn-outline-purple">
+                            Project Details
+                            <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <p class="text-center text-secondary mt-4">
+            These are project ideas. Add your completed projects
+            and real results as you build them.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Contact Section -->
+
+<section id="contact" class="contact-section section-padding">
+
+    <div class="container">
+
+        <div class="text-center section-heading mb-5">
+
+            <h2 class="fw-bold">
+                Contact <span class="purple-text">Me</span>
+            </h2>
+
+            <p>Let's connect and discuss data projects</p>
+
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-7 col-lg-6">
+
+                <div class="card custom-card">
+
+                    <div class="card-body p-4">
+
+                        <form action="mailto:YOUR_EMAIL@example.com"
+                              method="post"
+                              enctype="text/plain">
+
+                            <label for="name" class="form-label">
+                                Your Name
+                            </label>
+
+                            <input type="text"
+                                   id="name"
+                                   name="name"
+                                   class="form-control mb-3"
+                                   placeholder="Enter your name"
+                                   required>
+
+                            <label for="email" class="form-label">
+                                Your Email
+                            </label>
+
+                            <input type="email"
+                                   id="email"
+                                   name="email"
+                                   class="form-control mb-3"
+                                   placeholder="name@example.com"
+                                   required>
+
+                            <label for="message" class="form-label">
+                                Your Message
+                            </label>
+
+                            <textarea id="message"
+                                      name="message"
+                                      class="form-control mb-3"
+                                      rows="4"
+                                      placeholder="Write your message"
+                                      required></textarea>
+
+                            <button type="submit"
+                                    class="btn btn-purple w-100">
+
+                                <i class="bi bi-send me-2"></i>
+                                Send Message
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer class="footer-section text-center py-4">
+
+    <div class="container">
+
+        <h5 class="fw-bold">Alaa Portfolio</h5>
+
+        <p class="mb-2">Turning Data Into Insights.</p>
+
+        <p class="mb-0">
+            &copy; 2026 Alaa. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JavaScript -->
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
+```
